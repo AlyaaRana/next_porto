@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1B1B1B;
+  --foreground: #F5F5F5;
+  --font-color-navbar: #FFC857;
+  --font-color-body:#C0C0C0;
+  --font-color-linkedin: #D4AF37;
+  --color-back-scroll : #A4A4A4;
+  --color-secondary: #2C2C2C;
 }
 
 @theme inline {
@@ -12,15 +17,86 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+.body {
+  color: var(--font-color-body);
+  font-family: Arial, Helvetica, sans-serif;
+  size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 24px; 
+  text-align: justify; 
 }
 
-body {
-  background: var(--background);
+nav {
+  font-size: 16px;
+  color: var(--font-color-navbar); 
+  padding: 35px 35px;
+}
+
+.h3 {
+  font-size: 45px;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.headline {
+  font-size: 32px;
+  color: var(--foreground);
+  line-height: 40px;
+  text-align: justify; 
+  align-items: center;
+}
+
+.job {
+  font-size: 16px;
+  color: var(--foreground);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: justify; 
+}
+
+.linkedin {
+  font-size: 16px;
+  color: var(--font-color-linkedin );
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: justify; 
+}
+
+.label{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+}
+
+.label-project-card{
+  padding: 15px 25px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.project-card{
+  background-color: var(--color-secondary);
+  border-top-left-radius: 15px; 
+  border-top-right-radius: 15px;
+  width: 750px;
+  height: 400px;
+}
+
+/* Buat Chrome, Safari, Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Buat Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
