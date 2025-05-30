@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation"; 
 import { projectData } from "@/data/project-data";
 import ProjectCard from "@/component/project-card";
 
@@ -7,13 +8,14 @@ const Projects = () => {
   const [selected, setSelected] = useState("All");
   const scrollRef = useRef(null);
   const [scrollPercent, setScrollPercent] = useState(0);
+  const router = useRouter(); // Initialize useRouter
 
   const filtered =
     selected === "All"
       ? projectData
       : projectData.filter((project) => project.type === selected);
 
-  // Scroll event handler buat update scroll percent
+  // Scroll event handler to update scroll percent
   useEffect(() => {
     const handleScroll = () => {
       const container = scrollRef.current;
@@ -25,11 +27,11 @@ const Projects = () => {
 
       setScrollPercent(percent);
 
-      // Loop ke awal kalau udah sampe bawah
+      // Loop to the top if scrolled to the bottom
       if (scrollTop >= scrollHeight - 2) {
         setTimeout(() => {
           container.scrollTo({ top: 0, behavior: "smooth" });
-        }, 500); // delay biar nggak kerasa terlalu mendadak
+        }, 500); // Delay to avoid abrupt behavior
       }
     };
 
@@ -44,6 +46,11 @@ const Projects = () => {
       }
     };
   }, []);
+
+  const handleProjectClick = (projectId) => {
+    // Redirect to the project page with the project ID
+    router.push(`/project?id=${projectId}`);
+  };
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-[85px] py-[100px]">
@@ -66,13 +73,14 @@ const Projects = () => {
               {filtered.map((project, idx) => (
                 <div
                   key={project.id}
-                  className="scroll-snap-start"
+                  className="scroll-snap-start cursor-pointer"
                   style={{
                     height: "392px",
                     marginTop: idx === 0 ? "0" : "-58px",
                     paddingTop: idx !== 0 ? "5px" : "0",
                     zIndex: filtered.length - idx,
                   }}
+                  onClick={() => handleProjectClick(project.id)} // Add click handler
                 >
                   <div className="relative z-10">
                     <ProjectCard {...project} />

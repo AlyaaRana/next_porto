@@ -7,16 +7,19 @@ import Projects from "@/sections/projects";
 import Gallery from "@/sections/gallery";
 import Service from "@/sections/services";
 import Contact from "@/sections/contact";
+import Certificate from "@/sections/certificate";
 
 export default function Home() {
   return (
     <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen ">
       <Navbar />
       <Hero />
-      {/* <Experience /> */}
+      <Experience />
       <Projects />
-      <Service/>
       <Gallery />
+      {/* service sekalian sama contact aja ga si?
+      <Service/> */}
+      <Certificate />
       <Contact />
     </div>
   );
