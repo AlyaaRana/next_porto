@@ -1,14 +1,21 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation"; 
-import { projectData } from "@/data/project-data";
+// import { projectData } from "@/data/project-data";
 import ProjectCard from "@/component/project-card";
+import { projectData } from "@/data/project-data"
 
 const Projects = () => {
   const [selected, setSelected] = useState("All");
   const scrollRef = useRef(null);
   const [scrollPercent, setScrollPercent] = useState(0);
-  const router = useRouter(); // Initialize useRouter
+  const router = useRouter(); 
+  const cardData = projectData;
+  // const cardData = [
+  //   {id: 1, type: "Web", title: "AyamKu App", description: "Description 1", image: "/ayamku-1.jpeg"},
+  //   {id: 2, type: "Mobile", title: "Garapan App", description: "Description 2", image: "/garapan-1.png"},  
+  //   {id: 3, type: "Web", title: "ILearn App", description: "Description 3", image: "/ilearn-1.jpeg"},
+  // ]
 
   const filtered =
     selected === "All"
@@ -48,12 +55,11 @@ const Projects = () => {
   }, []);
 
   const handleProjectClick = (projectId) => {
-    // Redirect to the project page with the project ID
     router.push(`/project?id=${projectId}`);
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-[85px] py-[100px]">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20 py-[90px]">
       <div className="text-center space-y-[15px]">
         <p className="h3">Projects</p>
         <p className="body">
@@ -70,7 +76,7 @@ const Projects = () => {
             }}
           >
             <div className="relative">
-              {filtered.map((project, idx) => (
+              {cardData.map((project, idx) => (
                 <div
                   key={project.id}
                   className="scroll-snap-start cursor-pointer"
@@ -78,12 +84,16 @@ const Projects = () => {
                     height: "392px",
                     marginTop: idx === 0 ? "0" : "-58px",
                     paddingTop: idx !== 0 ? "5px" : "0",
-                    zIndex: filtered.length - idx,
+                    zIndex: cardData.length - idx,
                   }}
-                  onClick={() => handleProjectClick(project.id)} // Add click handler
+                  onClick={() => handleProjectClick(project.id)} 
                 >
                   <div className="relative z-10">
-                    <ProjectCard {...project} />
+                    <ProjectCard 
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                    />
                   </div>
                 </div>
               ))}

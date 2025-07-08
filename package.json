@@ -3,21 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "cross-env NODE_OPTIONS='--max-old-space-size=16384' next dev",
+    "build": "cross-env NODE_OPTIONS='--max-old-space-size=16384' next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@tabler/icons-react": "^3.34.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.16.0",
+    "motion": "^12.16.0",
+    "next": "^15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }

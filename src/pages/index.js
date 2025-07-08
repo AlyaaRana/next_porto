@@ -5,22 +5,23 @@ import Navbar from "@/component/navbar";
 import Experience from "@/sections/experience";
 import Projects from "@/sections/projects";
 import Gallery from "@/sections/gallery";
-import Service from "@/sections/services";
-import Contact from "@/sections/contact";
+import Footer from "@/sections/footer";
 import Certificate from "@/sections/certificate";
+import DigitalProduct from "@/sections/digital_product";
 
 export default function Home() {
   return (
     <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen ">
-      <Navbar />
+      <Navbar className="sticky top-0 z-50" />
       <Hero />
       <Experience />
       <Projects />
-      <Gallery />
+      {/* <DigitalProduct /> */}
+      {/* <Gallery /> */}
       {/* service sekalian sama contact aja ga si?
       <Service/> */}
-      <Certificate />
-      <Contact />
+      {/* <Certificate /> */}
+      <Footer />
     </div>
   );
 }
