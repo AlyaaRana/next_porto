@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    title: "Internship Flutter Developer at PIKPO, Singapore",
+    title: "Training Flutter Developer at PIKPO, Singapore",
     description:
       "Learning Flutter development with BLoC, exploring automation workflows using Retool, and collaborating with the team.",
     header: (

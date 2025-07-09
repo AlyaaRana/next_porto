@@ -17,14 +17,19 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:space-x-6">
           <p className="job">Fullstack developer</p>
-          <button className="linkedin border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition px-6 py-2 rounded-full text-sm">
-            Let’s connect →
-          </button>
+          <a
+            href="https://linkedin.com/in/alyaa-rana-raya-32a763271/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition px-6 py-2 rounded-full text-sm cursor-pointer inline-block text-center"
+          >
+            Let's connect →
+          </a>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:space-y-0 md:space-x-[100px] mt-4 py-[50px]">
           <p className="headline">
-            Hi, i’m Alyaa a designer and full-stack developer with focus on
+            Hi, i’m Alyaa a software engineer with a focus on
             Flutter
           </p>
           <p className="body">

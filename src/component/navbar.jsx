@@ -9,8 +9,8 @@ const Navbar = () => {
         <Link href="/">Home</Link>
         <Link href="/">Experience</Link> 
         <Link href="/">Project</Link> 
-        <Link href="/">Service</Link> 
-        <a href="#contact">Contact</a>
+        {/* <Link href="/">Digital Product</Link>  */}
+        <Link href="/">Contact</Link> 
         <TimeZoneClock />       
       </div>
     </nav>
