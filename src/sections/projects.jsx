@@ -59,7 +59,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20 py-[90px]">
+    <section id="projects" className="scroll-mt-20 relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20">
       <div className="text-center space-y-[15px]">
         <p className="h3">Projects</p>
         <p className="body">

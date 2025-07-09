@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="relative w-full bg-gradient-to-b from-black via-[#1c1c1c] to-[#2a2a2a] text-white overflow-hidden px-[85px] pt-[100px] pb-[40px] flex flex-col items-center justify-center"
+      className="scroll-mt-20 relative w-full bg-gradient-to-b from-black via-[#1c1c1c] to-[#2a2a2a] text-white overflow-hidden px-[85px] pt-[100px] pb-[40px] flex flex-col items-center justify-center"
     >
       {/* Title */}
       <div className="text-center mb-10 max-w-2xl">

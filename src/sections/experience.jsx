@@ -75,7 +75,7 @@ const Experience = () => {
 
   return (
     <div className="w-full" style={{ backgroundColor: "#1f1f1f" }}>
-      <section className="relative w-full flex justify-center text-white overflow-hidden px-0 py-[20px]">
+      <section id="experience" className="scroll-mt-20 relative w-full flex justify-center text-white overflow-hidden px-0 py-[20px]">
         <div className="w-full max-w-7xl text-center space-y-6">
           <div className="h3">Experience</div>
           <p>
