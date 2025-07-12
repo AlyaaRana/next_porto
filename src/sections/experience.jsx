@@ -75,13 +75,12 @@ const Experience = () => {
 
   return (
     <div className="w-full" style={{ backgroundColor: "#1f1f1f" }}>
-      <section id="experience" className="scroll-mt-20 relative w-full flex justify-center text-white overflow-hidden px-0 py-[20px]">
+      <section id="experience" className="scroll-mt-25 relative w-full flex justify-center text-white overflow-hidden px-0 py-[30px]">
         <div className="w-full max-w-7xl text-center space-y-6">
-          <div className="h3">Experience</div>
-          <p>
+          <div className="text-4xl font-bold">Experience</div>
+          <p className="mt-4 text-gray-400 max-w-xl mx-auto">
             Here are some of my work experiences, internships, social activities,
-            and event hosting. Each experience has helped me gain new skills and
-            grow.
+            
           </p>
           <div
             ref={scrollRef}

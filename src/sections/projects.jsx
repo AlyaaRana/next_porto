@@ -59,12 +59,11 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="scroll-mt-20 relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20">
-      <div className="text-center space-y-[15px]">
-        <p className="h3">Projects</p>
-        <p className="body">
+    <section id="projects" className="scroll-mt-5 relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20 py-20">
+      <div className="text-center">
+        <p className="text-4xl font-bold">Projects</p>
+        <p className="mt-4 text-gray-400 max-w-xl mx-auto">
           lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum
-          dolor sit amet lorem ipsum dolor sit amet
         </p>
 
         <div className="relative mt-12 flex items-start justify-center">

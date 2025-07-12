@@ -4,6 +4,8 @@ import Hero from "@/sections/hero";
 import Navbar from "@/component/navbar";
 import Experience from "@/sections/experience";
 import Projects from "@/sections/projects";
+import Testimonial from "@/sections/testimonial";
+import Education from "@/sections/education";
 import Gallery from "@/sections/gallery";
 import Footer from "@/sections/footer";
 import Certificate from "@/sections/certificate";
@@ -14,8 +16,10 @@ export default function Home() {
     <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen ">
       <Navbar className="sticky top-0 z-50" />
       <Hero />
+      <Education />
       <Experience />
       <Projects />
+      <Testimonial />
       {/* <DigitalProduct /> */}
       {/* <Gallery /> */}
       {/* service sekalian sama contact aja ga si?
