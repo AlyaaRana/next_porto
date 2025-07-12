@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-hot-toast";
+import { useSearchParams } from "next/navigation";
+
 
 const FormInput = ({ label, name, type = "text", value, onChange, placeholder }) => (
   <div>
@@ -38,9 +40,11 @@ const FormTextarea = ({ label, name, value, onChange, placeholder }) => (
 );
 
 const FormService = () => {
+  const searchParams = useSearchParams();
+  const subjectFromURL = searchParams.get("subject");
   const [form, setForm] = useState({
     name: "",
-    subject: "",
+    subject:subjectFromURL || "",
     email: "",
     message: "",
   });
@@ -49,9 +53,12 @@ const FormService = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
+    if (subjectFromURL) {
+    setForm((prev) => ({ ...prev, subject: subjectFromURL }));
+  }
     const sentStatus = localStorage.getItem("hasSentEmail");
     if (sentStatus === "true") setHasSent(true);
-  }, []);
+  }, [subjectFromURL]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
