@@ -9,7 +9,7 @@ const items = [
   {
     title: "Training Flutter Developer at PIKPO, Singapore",
     description:
-      "Learning Flutter development with BLoC, exploring automation workflows using Retool, and collaborating with the team.",
+      "Learning Flutter development with BLoC, explored automation with Retool, improved CI/CD integration, and collaborated in agile-based sprint cycles, and collaborating with the team.",
     header: (
       <img
         src="/pikpo-1.jpeg"

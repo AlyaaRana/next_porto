@@ -1,6 +1,9 @@
 const Hero = () => {
   return (
-    <section id="home" className="scroll-mt-20 relative w-full min-h-screen flex justify-center bg-black text-white overflow-hidden px-[85px] py-[100px]">
+    <section
+      id="home"
+      className="scroll-mt-20 relative w-full min-h-screen flex justify-center bg-black text-white overflow-hidden px-[85px] py-[100px]"
+    >
       <div className=" text-center ">
         <div className="relative w-full bg-[#1f1f1f] rounded-xl h-[210px] flex flex-col items-center z-10 mb-[60px]">
           <img
@@ -16,7 +19,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0 md:space-x-6">
-          <p className="job">Fullstack developer</p>
+          <p className="job">Flutter & Fullstack developer</p>
           <a
             href="https://linkedin.com/in/alyaa-rana-raya-32a763271/"
             target="_blank"
@@ -29,14 +32,16 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:space-y-0 md:space-x-[100px] mt-4 py-[50px]">
           <p className="headline">
-            Hi, i’m Alyaa a software engineer with a focus on
-            Flutter
+            Hi, I'm Alyaa a developer who crafts clean and intuitive Flutter
+            apps, always putting users first.
           </p>
           <p className="body">
-            As a recent graduate and current student, I specialize in Flutter
-            and am expanding into full-stack development. With strong
-            problem-solving and collaboration skills, I aim to contribute to
-            impactful, user-driven projects.
+            I'm a Computer Science student at Binus University with a background
+            in vocational software engineering. I specialize in Flutter and am
+            expanding into full-stack and data science. Known for being
+            disciplined, curious, and always on time, I build apps that are both
+            functional and meaningful. Outside coding, I enjoy space topics and
+            mentoring others.
           </p>
         </div>
       </div>

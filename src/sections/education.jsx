@@ -3,14 +3,14 @@ import { FaGraduationCap } from "react-icons/fa";
 const Education = () => {
   const items = [
     {
-      year: "2025",
+      year: "2022 -2025",
       title: "Vocational High School (SMK) Raden Umar Said Kudus",
       desc: "Majored in Software Engineering (RPL) where I learned the basics of web & mobile development through hands-on practice.",
       position: "left",
       logo: <FaGraduationCap className="text-yellow-400 text-xl" />,
     },
     {
-      year: "2029",
+      year: "2025 - Present",
       title: "Binus University of Semarang",
       desc: "Currently pursuing a degree in Computer Science",
       position: "right",
