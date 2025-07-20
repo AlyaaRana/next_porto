@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="scroll-mt-5 relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-6 md:px-20 py-20"
+      className="scroll-mt-5 relative w-full min-h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden px-4 sm:px-6 md:px-20 py-20"
     >
       <div className="text-center">
         <p className="text-4xl font-bold">Projects</p>
@@ -74,7 +74,7 @@ const Projects = () => {
             "All",
             "Frontend",
             "Backend",
-            "Data Analyst",
+            "Data Science",
           ].map((filter) => (
             <button
               key={filter}

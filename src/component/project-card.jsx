@@ -14,4 +14,3 @@ const ProjectCard = ({ title, description, image }) => {
   };
   
   export default ProjectCard;
-  

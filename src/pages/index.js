@@ -10,15 +10,19 @@ import Gallery from "@/sections/gallery";
 import Footer from "@/sections/footer";
 import Certificate from "@/sections/certificate";
 import DigitalProduct from "@/sections/digital_product";
+import DevTools from "@/sections/dev_tools";
+import Languages from "@/sections/languanges";
 
 export default function Home() {
   return (
     <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen ">
       <Navbar className="sticky top-0 z-50" />
       <Hero />
+      <DevTools />
       <Education />
       <Experience />
       <Projects />
+      <Languages />
       <Testimonial />
       {/* <DigitalProduct /> */}
       {/* <Gallery /> */}

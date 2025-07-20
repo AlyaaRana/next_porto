@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="scroll-mt-20 relative w-full min-h-screen flex justify-center bg-black text-white overflow-hidden px-[85px] py-[100px]"
+      className="scroll-mt-20 relative w-full min-h-screen flex justify-center bg-black text-white overflow-hidden px-[85px] pt-[120px] pb-[50px]"
     >
       <div className=" text-center ">
         <div className="relative w-full bg-[#1f1f1f] rounded-xl h-[210px] flex flex-col items-center z-10 mb-[60px]">
