@@ -1,11 +1,11 @@
 const ProjectCard = ({ title, description, image }) => {
     return (
-      <div className="project-card">
+      <div className="project-card mx-auto">
         
-        <div className="flex flex-col md:flex-row justify-between h-[65px] label-project-card ">
-            <text>{title}</text>
+        <div className="flex flex-row justify-between items-center h-[65px] label-project-card">
+            <text className="text-sm sm:text-base md:text-lg lg:text-xl">{title}</text>
             <button>
-                <img src="/arrow.svg" alt="arrow" />
+                <img src="/arrow.svg" alt="arrow" className="w-4 h-4 md:w-5 md:h-5" />
             </button>
         </div>
         <img src={image} alt={title} className="w-full h-auto object-cover max-h-150" />
@@ -13,4 +13,4 @@ const ProjectCard = ({ title, description, image }) => {
     );
   };
   
-  export default ProjectCard;
+  export default ProjectCard; 

@@ -1,15 +1,14 @@
 const tools = [
   { src: "/icons/flutter.svg", alt: "Flutter" },
   { src: "/icons/react.svg", alt: "React" },
-  { src: "/icons/php.svg", alt: "PHP" },
   { src: "/icons/codeigniter.svg", alt: "CodeIgniter" },
+  { src: "/icons/laravel.svg", alt: "Laravel" },
+  { src: "/icons/mysql.png", alt: "MySQL" },
   { src: "/icons/git.svg", alt: "Git" },
   { src: "/icons/vscode.svg", alt: "VS Code" },
   { src: "/icons/figma.png", alt: "Figma" },
-  { src: "/icons/laravel.svg", alt: "Laravel" },
-  { src: "/icons/mysql.png", alt: "MySQL" },
-
 ];
+
 
 const DevTools = () => {
   return (

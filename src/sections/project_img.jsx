@@ -7,7 +7,7 @@ const ProjectImg = ({ projectId }) => {
   if (!project) return null;
 
   return (
-    <section className="w-full h-screen bg-[#cacdd1] flex items-center justify-center">
+    <section className="w-full h-[50vh] md:h-screen bg-[#cacdd1] flex items-center justify-center">
       <img
         src={project.image}
         alt={project.title}
@@ -18,3 +18,5 @@ const ProjectImg = ({ projectId }) => {
 };
 
 export default ProjectImg;
+
+

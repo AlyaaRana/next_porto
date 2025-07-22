@@ -74,7 +74,7 @@ const Projects = () => {
             "All",
             "Frontend",
             "Backend",
-            "Data Science",
+            // "Data Science",
           ].map((filter) => (
             <button
               key={filter}

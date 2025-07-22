@@ -34,36 +34,36 @@ const ProjectDesc = ({ projectId }) => {
   }
 
   return (
-    <section className="relative w-full h-auto bg-[#2C2C2C] text-white overflow-hidden mx-[60px] px-[60px] py-[90px]">
-      <div className="flex flex-col md:flex-row gap-10">
+    <section className="relative w-full h-auto bg-[#2C2C2C] text-white overflow-hidden mx-0 md:mx-[60px] px-[20px] md:px-[60px] py-[40px] md:py-[90px]">
+      <div className="flex flex-col gap-6 md:gap-10 md:flex-row">
         {/* LEFT SIDE */}
         <div className={`text-left ${qrCodeValue ? 'w-full md:w-1/2' : 'w-full'}`}>
           {/* Title + Links */}
-          <p className="h3">{project.title}</p>
+          <p className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">{project.title}</p>
           {project.links?.length > 0 ? (
-            <div className="flex gap-3 flex-wrap items-center">
+            <div className="flex gap-2 md:gap-3 flex-wrap items-center mt-3">
               {project.links.map((link, idx) => (
                 <a
                   key={idx}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline flex items-center gap-1"
+                  className="text-blue-400 hover:underline flex items-center gap-1 text-sm md:text-base"
                 >
                   🔗 {link.type}
                 </a>
               ))}
             </div>
           ) : (
-            <p className="text-sm text-gray-400 italic mt-2">No links available</p>
+            <p className="text-xs md:text-sm text-gray-400 italic mt-2">No links available</p>
           )}
 
           {/* Project Info: Status, Start Date, End Date */}
-          <div className="mt-6 space-y-2">
+          <div className="mt-4 md:mt-6 space-y-2">
             {/* Status */}
             {project.status && (
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-400">Status:</span>
+                <span className="text-xs md:text-sm text-gray-400">Status:</span>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   project.status === 'Done' 
                     ? 'bg-green-900 text-green-300' 
@@ -79,8 +79,8 @@ const ProjectDesc = ({ projectId }) => {
             {/* Timeline */}
             {(project.startDate || project.endDate) && (
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-400">Timeline:</span>
-                <span className="text-sm text-white">
+                <span className="text-xs md:text-sm text-gray-400">Timeline:</span>
+                <span className="text-xs md:text-sm text-white">
                   {project.startDate && project.endDate 
                     ? `${project.startDate} - ${project.endDate}`
                     : project.startDate 
@@ -95,27 +95,28 @@ const ProjectDesc = ({ projectId }) => {
           </div>
 
           {/* Description */}
-          <p className="body mt-4">{project.description}</p>
+          <p className="text-sm md:text-base leading-relaxed text-gray-300 mt-4">{project.description}</p>
         </div>
 
         {/* RIGHT SIDE - QR Code - Only show if barcode exists */}
         {qrCodeValue && (
           <div className="flex items-center justify-center w-full md:w-1/2">
             <div className="flex flex-col items-center gap-2">
-              <div className="bg-white p-4 rounded-lg">
+              <div className="bg-white p-3 md:p-4 rounded-lg">
                 {mounted ? (
                   <QRCode 
                     value={qrCodeValue} 
-                    size={160}
+                    size={120}
                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                    className="md:w-40 md:h-40"
                   />
                 ) : (
-                  <div className="w-40 h-40 bg-gray-200 animate-pulse rounded flex items-center justify-center">
-                    <p className="text-gray-500 text-sm">Loading QR...</p>
+                  <div className="w-30 h-30 md:w-40 md:h-40 bg-gray-200 animate-pulse rounded flex items-center justify-center">
+                    <p className="text-gray-500 text-xs md:text-sm">Loading QR...</p>
                   </div>
                 )}
               </div>
-              <p className="text-sm text-gray-300">Scan to view prototype</p>
+              <p className="text-xs md:text-sm text-gray-300">Scan to view prototype</p>
             </div>
           </div>
         )}

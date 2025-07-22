@@ -82,12 +82,44 @@ nav {
   line-height: 28px;
 }
 
+/* Mobile responsive styles for label */
+@media (max-width: 768px) {
+  .label-project-card {
+    padding: 12px 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .label-project-card {
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 .project-card{
   background-color: var(--color-secondary);
   border-top-left-radius: 15px; 
   border-top-right-radius: 15px;
   width: 750px;
   height: 400px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(100vw - 60px); /* Full width minus 30px margin on each side */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: calc(100vw - 40px); /* Full width minus 20px margin on each side */
+    margin: 0 auto;
+  }
 }
 
 /* Buat Chrome, Safari, Edge */

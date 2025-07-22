@@ -31,14 +31,15 @@ const Education = () => {
 
       <div className="relative flex flex-col items-center">
         {/* Vertical line */}
-        <div className="absolute w-1 bg-yellow-400 h-full left-1/2 transform -translate-x-1/2 z-0" />
+        <div className="absolute w-1 bg-yellow-400 h-1/2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0" />
+
 
         {items.map((item, index) => (
           <div
             key={index}
             className={`w-full md:w-1/2 mb-20 z-10 ${item.position === "left"
-                ? "self-start text-right pr-6"
-                : "self-end text-left pl-6"
+              ? "self-start text-right pr-6"
+              : "self-end text-left pl-6"
               }`}
           >
             <div className="bg-zinc-900 border border-yellow-400 rounded-2xl p-6 shadow-md">

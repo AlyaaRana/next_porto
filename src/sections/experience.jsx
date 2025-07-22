@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    title: "Training Flutter Developer at PIKPO, Singapore",
+    title: "Flutter Developer Intern at PIKPO, Singapore",
     description:
-      "Learning Flutter development with BLoC, explored automation with Retool, improved CI/CD integration, and collaborated in agile-based sprint cycles, and collaborating with the team.",
+      "Contributed to production-level Flutter apps using BLoC architecture. Conducted weekly code reviews, implemented UI from Figma, and explored automation workflows using Retool. Practiced effective team collaboration and used English in daily communication.",
+    date: "Nov 2024 – Mar 2025",
+    location: "Remote · Singapore",
     header: (
       <img
         src="/pikpo-1.jpeg"
@@ -20,9 +22,11 @@ const items = [
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />
   },
   {
-    title: "Industrial Internship at PT. Hartono Istana Teknologi",
+    title: "Software Developer Intern at Polytron Indonesia",
     description:
-      "Interned at Polytron, worked on CodeIgniter projects and collaborated with the engineering team.",
+      "Developed real-time dashboards & alert systems using PHP & CodeIgniter. Collaborated with engineering teams on IoT-integrated systems. Gained hands-on experience in backend/frontend dev and worked closely with interns from BINUS, UNDIP, and Sanata Dharma.",
+    date: "Oct 2024 – Mar 2025",
+    location: "On-site · Kudus, Central Java",
     header: (
       <img
         src="/pkl-1.jpg"
@@ -33,6 +37,8 @@ const items = [
     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />
   }
 ];
+
+
 
 const Experience = () => {
   const scrollRef = useRef(null);
@@ -94,6 +100,8 @@ const Experience = () => {
                 <ExperienceCard
                   title={item.title}
                   description={item.description}
+                  date={item.date}
+                  location={item.location}
                   header={item.header}
                   icon={item.icon}
                 />
@@ -122,15 +130,18 @@ const Experience = () => {
 
 export default Experience;
 
-const ExperienceCard = ({ title, description, header, icon }) => {
+const ExperienceCard = ({ title, description, header, icon, date, location }) => {
   return (
     <div className="w-full h-full px-4 md:px-16 box-border">
       <div className="w-full flex flex-col rounded-xl border border-neutral-200 bg-white p-6 dark:border-white/[0.2] dark:bg-black shadow-md hover:shadow-xl transition-transform duration-700 ease-in-out">
         <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden mb-4">
           {header}
         </div>
-        <div className="flex items-center gap-2 text-neutral-500 mb-2">{icon}</div>
+        <div className="flex items-center gap-2 text-neutral-500 mb-1">
+          {icon}
+        </div>
         <div className="text-lg font-bold text-neutral-700 dark:text-neutral-100">{title}</div>
+        <div className="text-sm text-neutral-400 dark:text-neutral-400">{date} · {location}</div>
         <div className="text-sm text-neutral-600 dark:text-neutral-300 mt-2">{description}</div>
       </div>
     </div>

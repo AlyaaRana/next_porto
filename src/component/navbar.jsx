@@ -24,6 +24,7 @@ const Navbar = () => {
           <Link href="#education" className="hover:text-yellow-400 transition-colors">Education</Link> 
           <Link href="#experience" className="hover:text-yellow-400 transition-colors">Experience</Link> 
           <Link href="#projects" className="hover:text-yellow-400 transition-colors">Project</Link> 
+          <Link href="#contact" className="hover:text-yellow-400 transition-colors">Contact</Link> 
           <TimeZoneClock />       
         </div>
 
@@ -75,6 +76,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Project
+          </Link>
+          <Link 
+            href="#contact" 
+            className="hover:text-yellow-400 transition-colors py-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
           </Link>
           <div className="pt-2 border-t border-gray-700">
             <TimeZoneClock />
