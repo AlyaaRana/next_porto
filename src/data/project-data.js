@@ -5,7 +5,7 @@ export const projectData = [
       type: "Mobile",
       filter: ["Frontend"],
       description: "The AyamKu app is a food ordering application developed as part of our final project over a six-month period. The app is built using Flutter with GetX for state management, Laravel for the backend, and MySQL as the database. ",
-      image: "/ayamku_mockup.png",
+      image: "/project/ayamku-1.png",
       links: [
         { type: "GitHub", url: "https://github.com/Fadzaa/ayamku" },
       ],
@@ -23,7 +23,7 @@ export const projectData = [
       type: "Mobile",
       filter: ["Frontend"],
       description: "Garapan App is a marketplace app designed to empower traditional craftsmen in Yogyakarta by showcasing their heritage products to a broader market. The platform supports admin-managed orders, custom product requests, and user-friendly UX for tech-limited users.",
-      image: "/garapan-1.png",
+      image: "/project/garapan-1.png",
       links: [
         { type: "LinkedIn", url: "https://www.linkedin.com/posts/alyaa-rana-raya-32a763271_garapan-app-activity-7158102474061500416-IlAo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEJ_YBIBvP7pvk-NiIRaNdB1MiS1vWMOeWY" },
       ],
@@ -42,7 +42,7 @@ export const projectData = [
       type: "Mobile",
       filter: ["Frontend"],
       description: "As part of our Mobile Development course, we were tasked with developing an application using Flutter and GetX for state management. The app is an online learning platform featuring video content, with Firebase as the database, and videos are streamed using the YoutubePlayerController",
-      image: "/ilearn-1.png",
+      image: "/project/ilearn-1.png",
       links: [
         { type: "GitHub", url: "https://github.com/PradiptaAhmad/iLearn_project" },
       ],
@@ -59,7 +59,7 @@ export const projectData = [
       type: "Mobile",
       filter: ["Frontend"],
       description: "",
-      image: "/tracker-flutter.png",
+      image: "/project/tracker-1.png",
       links: [
         { type: "GitHub", url: "https://github.com/AlyaaRana/tracker_app" },
       ],
@@ -88,7 +88,7 @@ export const projectData = [
       type: "Mobile",
       filter: ["Frontend"],
       description: "Flutter Space Exploration is an educational and interactive mobile application developed using Flutter with BLoC state management architecture. The development process was research-driven, incorporating data gathered from user questionnaires and insights from academic journals focused on planetary science",
-      image: "/neaaorea.png",
+      image: "/project/neaaorea-1.png",
       links: [
         { type: "GitHub", url: "https://github.com/AlyaaRana/flutter_bloc_space_app" },
       ],
@@ -97,6 +97,22 @@ export const projectData = [
       endDate: "Present",
       additional: ["Flutter", "Dart", "Figma"],
       skills: ["Time Management"]
+    },
+    {
+      id: 7,
+      title: "NeFood App",
+      type: "Mobile",
+      filter: ["Frontend"],
+      description: "UI UXMobile Application for food delivery service, designed to provide a seamless and user-friendly experience for customers. The app features a modern and intuitive interface, allowing users to easily browse menus, place orders, and track deliveries in real-time.",
+      image: "/project/nefood-1.png",
+      // links: [
+      //   { type: "GitHub", url: "https://github.com/AlyaaRana/flutter_bloc_space_app" },
+      // ],
+      status: "Done",
+      startDate: "",
+      endDate: "",
+      // additional: ["Flutter", "Dart", "Figma"],
+      // skills: ["Time Management"]
     },
     
   ];
